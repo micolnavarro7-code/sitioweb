@@ -227,6 +227,23 @@
 
         /* ===== PORTFOLIO ===== */
         .portfolio-frame { border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+        @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+        /* ===== FORM VALIDATION ===== */
+        .form-input.input-error {
+            border-color: #ef4444;
+            background: #fef2f2;
+        }
+
+        .form-input.input-error:focus {
+            border-color: #ef4444;
+            box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15);
+        }
+
+        .form-input.input-valid {
+            border-color: #10b981;
+        }
     </style>
 </head>
 
@@ -253,6 +270,7 @@
 <symbol id="i-snowflake" viewBox="0 0 448 512"><path d="M224 0c13.3 0 24 10.7 24 24V70.1l23-23c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-57 57v76.5l66.2-38.2 20.9-77.8c3.4-12.8 16.6-20.4 29.4-17s20.4 16.6 17 29.4L373 135l55.1-31.8c11.5-6.6 26.2-2.7 32.8 8.8s2.7 26.2-8.8 32.8L397 176.7l24.4 6.5c12.8 3.4 20.4 16.6 17 29.4s-16.6 20.4-29.4 17l-77.8-20.9L265 246.9v76.5l66.2-38.2 20.9-77.8c3.4-12.8 16.6-20.4 29.4-17s20.4 16.6 17 29.4l-8.4 31.3 55.1-31.8c11.5-6.6 26.2-2.7 32.8 8.8s2.7 26.2-8.8 32.8l-55.1 31.8 31.3 8.4c12.8 3.4 20.4 16.6 17 29.4s-16.6 20.4-29.4 17l-77.8-20.9L289 365.1v76.5l57 57c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-23-23V488c0 13.3-10.7 24-24 24s-24-10.7-24-24V441.9l-23 23c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l57-57V297.5L183 335.7l-20.9 77.8c-3.4 12.8-16.6 20.4-29.4 17s-20.4-16.6-17-29.4l8.4-31.3L69.1 401.6c-11.5 6.6-26.2 2.7-32.8-8.8s-2.7-26.2 8.8-32.8l55.1-31.8-31.3-8.4c-12.8-3.4-20.4-16.6-17-29.4s16.6-20.4 29.4-17l77.8 20.9L225 256l-66.2-38.2-77.8 20.9c-12.8 3.4-26-4.2-29.4-17s4.2-26 17-29.4l31.3-8.4L44.8 151.2c-11.5-6.6-15.5-21.3-8.8-32.8s21.3-15.5 32.8-8.8l55.1 31.8-8.4-31.3c-3.4-12.8 4.2-26 17-29.4s26 4.2 29.4 17l20.9 77.8L249 213.3V136.8l-57-57c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l23 23V24c0-13.3 10.7-24 24-24z"/></symbol>
 <symbol id="i-sun" viewBox="0 0 512 512"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 390.9l-19.9 107.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM256 160a96 96 0 1 0 0 192 96 96 0 1 0 0-192z"/></symbol>
 <symbol id="i-arrow-right" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></symbol>
+<symbol id="i-spinner" viewBox="0 0 512 512"><path d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z"/></symbol>
 </svg>
 
     <!-- ===== PROGRESS BAR ===== -->
@@ -621,21 +639,27 @@
                         </div>
 
                         <div class="p-6 sm:p-8">
-                            <form id="main-form" onsubmit="return webLeadFormSubmit(event)" class="space-y-4">
+                            <form id="main-form" onsubmit="return webLeadFormSubmit(event)" class="space-y-4" novalidate>
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
                                         <label class="form-label" for="first_name">First Name *</label>
-                                        <input type="text" id="first_name" name="first_name" class="form-input" placeholder="First Name" required>
+                                        <input type="text" id="first_name" name="first_name" class="form-input"
+                                            placeholder="First Name" required minlength="2">
+                                        <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
                                     </div>
                                     <div>
                                         <label class="form-label" for="last_name">Last Name *</label>
-                                        <input type="text" id="last_name" name="last_name" class="form-input" placeholder="Last Name" required>
+                                        <input type="text" id="last_name" name="last_name" class="form-input"
+                                            placeholder="Last Name" required minlength="2">
+                                        <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
                                     </div>
                                 </div>
 
                                 <div>
                                     <label class="form-label" for="phone">Phone *</label>
-                                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="(978) 000-0000" required>
+                                    <input type="tel" id="phone" name="phone" class="form-input"
+                                        placeholder="(978) 000-0000" required>
+                                    <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
                                 </div>
 
                                 <div>
@@ -653,18 +677,23 @@
                                 </div>
 
                                 <div>
-                                    <label class="form-label" for="street">Street Address</label>
-                                    <input type="text" id="street" name="street" class="form-input" placeholder="123 Main St">
+                                    <label class="form-label" for="street">Street Address *</label>
+                                    <input type="text" id="street" name="street" class="form-input"
+                                        placeholder="123 Main St" required minlength="3">
+                                    <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-4">
                                     <div>
                                         <label class="form-label" for="city">City</label>
-                                        <input type="text" id="city" name="city" class="form-input" placeholder="e.g. Westford">
+                                        <input type="text" id="city" name="city" class="form-input"
+                                            placeholder="e.g. Westford">
                                     </div>
                                     <div>
-                                        <label class="form-label" for="zip">Zip Code</label>
-                                        <input type="text" id="zip" name="zip" class="form-input" placeholder="01886">
+                                        <label class="form-label" for="zip">Zip Code *</label>
+                                        <input type="text" id="zip" name="zip" class="form-input" placeholder="01886"
+                                            required maxlength="10">
+                                        <p class="form-error text-red-500 text-xs mt-1 hidden"></p>
                                     </div>
                                 </div>
 
@@ -677,14 +706,13 @@
                                 <input type="hidden" id="utm_source" name="utm_source">
                                 <input type="hidden" id="utm_medium" name="utm_medium">
                                 <input type="hidden" id="utm_campaign" name="utm_campaign">
-                                <input type="hidden" id="utm_content" name="utm_content">
                                 <input type="hidden" id="utm_term" name="utm_term">
-                                <input type="hidden" id="utm_id" name="utm_id">
 
                                 <button type="submit" class="form-submit mt-2">
                                     <svg class="icon mr-2"><use href="#i-clipboard"/></svg> Get Free Estimate
                                 </button>
-                                <p class="text-center text-xs text-gray-400 mt-4 italic">* Your information is 100% secure.</p>
+                                <p class="text-center text-xs text-gray-400 mt-4 italic">* Required fields. Your information is 100%
+                                    secure.</p>
                             </form>
 
                             <div id="form-success-message" class="form-success">
@@ -904,22 +932,132 @@
             });
         });
 
+        // Form Validation Helpers
+        function showError(input, message) {
+            input.classList.add('input-error');
+            input.classList.remove('input-valid');
+            const errorEl = input.parentElement.querySelector('.form-error');
+            if (errorEl) {
+                errorEl.textContent = message;
+                errorEl.classList.remove('hidden');
+            }
+        }
+
+        function clearError(input) {
+            input.classList.remove('input-error');
+            const errorEl = input.parentElement.querySelector('.form-error');
+            if (errorEl) {
+                errorEl.textContent = '';
+                errorEl.classList.add('hidden');
+            }
+        }
+
+        function markValid(input) {
+            input.classList.remove('input-error');
+            input.classList.add('input-valid');
+            const errorEl = input.parentElement.querySelector('.form-error');
+            if (errorEl) {
+                errorEl.textContent = '';
+                errorEl.classList.add('hidden');
+            }
+        }
+
+        function formatPhone(value) {
+            var digits = value.replace(/\D/g, '');
+            if (digits.length === 0) return '';
+            if (digits.length <= 3) return '(' + digits;
+            if (digits.length <= 6) return '(' + digits.slice(0, 3) + ') ' + digits.slice(3);
+            return '(' + digits.slice(0, 3) + ') ' + digits.slice(3, 6) + '-' + digits.slice(6, 10);
+        }
+
+        // Auto-format phone on input
+        document.getElementById('phone').addEventListener('input', function (e) {
+            var cursorPos = this.selectionStart;
+            var oldLength = this.value.length;
+            this.value = formatPhone(this.value);
+            var newLength = this.value.length;
+            this.setSelectionRange(cursorPos + (newLength - oldLength), cursorPos + (newLength - oldLength));
+        });
+
+        // Clear errors on input
+        document.querySelectorAll('#main-form .form-input').forEach(function (input) {
+            input.addEventListener('input', function () {
+                if (this.value.trim().length > 0) clearError(this);
+            });
+        });
+
+        function validateForm(form) {
+            var isValid = true;
+            var firstError = null;
+
+            // First Name
+            var firstName = form.querySelector('#first_name');
+            if (!firstName.value.trim() || firstName.value.trim().length < 2) {
+                showError(firstName, !firstName.value.trim() ? 'First name is required.' : 'Enter at least 2 characters.');
+                isValid = false;
+                if (!firstError) firstError = firstName;
+            } else { markValid(firstName); }
+
+            // Last Name
+            var lastName = form.querySelector('#last_name');
+            if (!lastName.value.trim() || lastName.value.trim().length < 2) {
+                showError(lastName, !lastName.value.trim() ? 'Last name is required.' : 'Enter at least 2 characters.');
+                isValid = false;
+                if (!firstError) firstError = lastName;
+            } else { markValid(lastName); }
+
+            // Phone
+            var phone = form.querySelector('#phone');
+            var phoneDigits = phone.value.replace(/\D/g, '');
+            if (!phoneDigits || phoneDigits.length < 10) {
+                showError(phone, !phoneDigits ? 'Phone number is required.' : 'Enter a valid 10-digit phone number.');
+                isValid = false;
+                if (!firstError) firstError = phone;
+            } else { markValid(phone); }
+
+            // Street Address
+            var street = form.querySelector('#street');
+            if (!street.value.trim() || street.value.trim().length < 3) {
+                showError(street, !street.value.trim() ? 'Street address is required.' : 'Enter a valid street address.');
+                isValid = false;
+                if (!firstError) firstError = street;
+            } else { markValid(street); }
+
+            // Zip Code
+            var zip = form.querySelector('#zip');
+            var zipValue = zip.value.trim();
+            var zipRegex = /^\d{5}(-\d{4})?$/;
+            if (!zipValue || !zipRegex.test(zipValue)) {
+                showError(zip, !zipValue ? 'Zip code is required.' : 'Enter a valid 5-digit zip code.');
+                isValid = false;
+                if (!firstError) firstError = zip;
+            } else { markValid(zip); }
+
+            if (firstError) firstError.focus();
+            return isValid;
+        }
+
         // Form Submit
         function webLeadFormSubmit(event) {
             event.preventDefault();
-            var form = event.target;
-            var submitBtn = form.querySelector('.form-submit');
+            const form = event.target;
+
+            // Validate before submitting
+            if (!validateForm(form)) return false;
+
+            const submitBtn = form.querySelector('.form-submit');
             submitBtn.disabled = true;
+            submitBtn.innerHTML = '<svg class="icon mr-2" style="animation:spin 1s linear infinite"><use href="#i-spinner"/></svg> Sending...';
 
-            var formData = new FormData(form);
-
+            // Build JSON payload for API proxy
+            const formData = new FormData(form);
             var message = formData.get('message') || '';
             var service = formData.get('service');
             if (service) {
                 message = 'Service: ' + service + (message ? '\n\n' + message : '');
             }
             var utmParts = [];
-            ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','utm_id'].forEach(function(key) {
+            ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term'].forEach(function (key) {
                 var val = formData.get(key);
                 if (val) utmParts.push(key + '=' + val);
             });
@@ -927,30 +1065,51 @@
                 message += (message ? '\n\n' : '') + '--- UTM ---\n' + utmParts.join('\n');
             }
 
-            var payload = {
+            const payload = {
                 FirstName: formData.get('first_name'),
                 LastName: formData.get('last_name'),
                 Phone: formData.get('phone'),
-                Street: formData.get('street') || '',
+                Street: formData.get('street'),
                 City: formData.get('city') || '',
-                Zip: formData.get('zip') || '',
+                Zip: formData.get('zip'),
                 Message: message
             };
 
+            // Submit via API proxy
             fetch('/api/contact', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             })
-                .then(function(response) { return response.json(); })
-                .then(function(data) {
+                .then(response => {
+                    console.log('WebLeadForm Submit Success');
+
+                    // === CALLRAIL MANUAL SUBMISSION CAPTURE ===
+                    function triggerCallRail(retries) {
+                        if (window.CallTrk && typeof window.CallTrk.captureForm === 'function') {
+                            window.CallTrk.captureForm(form);
+                            console.log('CallRail captureForm executed successfully');
+                        } else if (retries > 0) {
+                            console.warn('CallRail captureForm undefined, retrying...');
+                            setTimeout(() => triggerCallRail(retries - 1), 500);
+                        } else {
+                            console.error('CallRail captureForm timeout. Are you testing locally via file:/// ?');
+                        }
+                    }
+                    triggerCallRail(6); // 3 seconds timeout
+
+                    if (typeof FormTracker !== 'undefined' && FormTracker.submit) {
+                        FormTracker.submit(form);
+                    }
+                    // ==========================================
+
                     document.getElementById('main-form').classList.add('hidden');
                     document.getElementById('form-success-message').classList.add('show');
-                    try { if (window.CallTrk && typeof window.CallTrk.captureForm === 'function') { window.CallTrk.captureForm(form); } } catch(e) {}
                 })
-                .catch(function() {
+                .catch(error => {
+                    console.error('WebLeadForm Submit Error:', error);
                     submitBtn.disabled = false;
-                    alert('Something went wrong. Please call us directly at (978) 634-5611.');
+                    submitBtn.innerHTML = '<svg class="icon mr-2"><use href="#i-clipboard"/></svg> Get Free Estimate';
                 });
 
             return false;
